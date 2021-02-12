@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.random.artistdata.viewmodel.TrackViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="137dp">
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:text="@{String.format(@string/artistName,viewModel.selectedTrackData.artistName)}" />
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:text="@{String.format(@string/trackName,viewModel.selectedTrackData.trackName)}" />
+
+        <TextView
+            android:id="@+id/trackPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:text="@{String.format(@string/trackPrice,viewModel.selectedTrackData.trackPrice)}" />
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:text="@{String.format(@string/releaseDate,viewModel.selectedTrackData.releaseDate)}" />
+
+        <TextView
+            android:id="@+id/primaryGenreName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:text="@{String.format(@string/primaryGenreName,viewModel.selectedTrackData.primaryGenreName)}" />
+
+    </LinearLayout>
+
+</layout>

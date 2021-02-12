@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/trackByArtistSearchFragment">
+    <fragment
+        android:id="@+id/trackByArtistSearchFragment"
+        android:name="com.random.artistdata.fragment.TrackSearchFragment"
+        android:label="Artist Lookup"
+        tools:layout="@layout/fragment_artist_search">
+        <action
+            android:id="@+id/action_trackSearchFragment_to_trackListFragment"
+            app:destination="@id/trackListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trackListFragment"
+        android:name="com.random.artistdata.fragment.TrackListFragment"
+        tools:layout="@layout/fragment_track_list">
+        <action
+            android:id="@+id/action_trackListFragment_to_trackDetailsFragment"
+            app:destination="@id/trackDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/trackDetailsFragment"
+        android:name="com.random.artistdata.fragment.TrackDetailsFragment"
+        tools:layout="@layout/fragment_track_details">
+
+    </fragment>
+
+</navigation>
